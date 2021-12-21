@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+</head>
+<style>
+    .main{
+        {#display: flex;#}
+        margin-right: auto;
+        margin-left: auto;
+        text-align: center;
+    }
+    .login, .signup{
+        padding: 10px;
+    }
+</style>
+<body>
+<div class="main">
+    <div class="login">
+        {{ status }}
+        <br><br><br>
+        <form action="" method="post">
+            {% csrf_token %}
+            {{ form }}
+            <input type="submit" value="submit">
+        </form>
+    </div>
+
+    <div class="signup"><a href="usr/signup/"><button> Signup </button> </a></div>
+</div>
+</body>
+</html>
